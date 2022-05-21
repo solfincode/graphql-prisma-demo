@@ -10,6 +10,7 @@ const typeDefs = `
       postUser(name:String!,email:String!):User!
       postClass(title:String!,description:String!,category:String!):Class!
       deleteClass(id:String!):Class!
+      oneUser(id:String!):User!
   }
 
   type User{

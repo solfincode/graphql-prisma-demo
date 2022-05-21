@@ -32,6 +32,10 @@ const resolvers = {
       const id = args.id;
       return prisma.class.delete({ where: { id: id } });
     },
+    oneUser: (parent, args) => {
+      const id = args.id;
+      return prisma.user.findUnique({ where: { id: id } });
+    },
   },
 };
 
