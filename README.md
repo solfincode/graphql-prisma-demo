@@ -16,4 +16,17 @@ server
 ```
 const { graphqlHTTP } = require("express-graphql");
 const { makeExecutableSchema } = require("@graphql-tools/schema");
+
+.......
+
+const schema = makeExecutableSchema({ resolvers, typeDefs });
+
+app.use(
+  "/graphql",
+  graphqlHTTP({
+    schema: schema,
+    graphiql: true,
+  })
+);
+
 ```
